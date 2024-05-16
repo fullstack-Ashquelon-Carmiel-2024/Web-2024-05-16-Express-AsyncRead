@@ -22,6 +22,10 @@ function c () {
     }
     f()
 
+    function q() {
+        console.log('I am function "q()", I see function "f()"')
+    }
+
     return `I am function 'c'. I was HOISTED`
 }
 
@@ -63,3 +67,25 @@ e()
 //  the GLOBAL SCOPE f() is undefined
 
 console.log(`The GLOBAL b still says "${b}"`)
+
+
+for (var i=0; i < 3; i++) {
+
+    console.log(`I am var "i" INSIDE THE LOOP, and I'm ${i}`)
+    
+}
+
+console.log(`I am var "i" OUT OF THE LOOP, and I'm ${i}`)
+
+for (let j=0; j < 3; j++) {
+
+    console.log(`I am let "j" INSIDE THE LOOP, and I'm ${j}`)
+    
+}
+
+console.log(`I am let "j" OUT OF THE LOOP, and I'm ${j}`)
+
+// FOR var - scope could be only GLOBAL or FUNCTION
+
+// FOR let (or const) - scope could be also any command block 
+//   like "for","while","if"
